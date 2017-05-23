@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import br.com.juliomakita.fxcomponents.control.mask.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="main-panel" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.transporte.controller.contrato.PesquisaValorContratoController">
+   <center>
+      <GridPane hgap="30.0" prefHeight="291.0" prefWidth="560.0" BorderPane.alignment="CENTER">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="476.0" minWidth="10.0" prefWidth="118.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="377.0" minWidth="10.0" prefWidth="234.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.0" minWidth="0.0" prefWidth="148.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="241.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="251.0" minHeight="10.0" prefHeight="186.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="251.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="71.0" text="Valor" />
+                  <BigDecimalField fx:id="valor" prefHeight="27.0" prefWidth="107.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="173.0" text="Valor por Extenso" />
+                  <TextField fx:id="valorExtenso" prefHeight="27.0" prefWidth="208.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+               <children>
+                  <Label />
+                  <Button mnemonicParsing="false" onAction="#pesquisar" prefHeight="27.0" prefWidth="90.0" text="Pesquisar" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnSpan="3" GridPane.rowIndex="1">
+               <children>
+                  <TableView fx:id="valorContratoTable" prefHeight="231.0" prefWidth="560.0">
+                    <columns>
+                      <TableColumn fx:id="gradeValor" prefWidth="156.0" text="Valor" />
+                        <TableColumn fx:id="gradeValorExtenso" prefWidth="397.0" text="Valor por Extenso" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </VBox>
+            <VBox prefHeight="46.0" prefWidth="560.0" GridPane.columnSpan="3" GridPane.rowIndex="2">
+               <children>
+                  <StackPane fx:id="stackPane" prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <Pagination fx:id="pagination" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                  </StackPane>
+               </children>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets left="20.0" right="20.0" top="20.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </center>
+   <bottom>
+      <Pane prefHeight="75.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="161.0" layoutY="25.0" prefHeight="25.0" prefWidth="90.0">
+               <children>
+                  <Hyperlink alignment="CENTER" contentDisplay="CENTER" onAction="#abrirDialogCadastrar" prefHeight="25.0" prefWidth="115.0" styleClass="lion-default" text="Incluir" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="268.0" layoutY="24.0" prefHeight="25.0" prefWidth="90.0">
+               <children>
+                  <Hyperlink alignment="CENTER" contentDisplay="CENTER" onAction="#editar" prefHeight="25.0" prefWidth="90.0" styleClass="lion-default" text="Editar" />
+               </children>
+            </HBox>
+            <HBox layoutX="375.0" layoutY="24.0" prefHeight="25.0" prefWidth="90.0">
+               <children>
+                  <Hyperlink alignment="CENTER" contentDisplay="CENTER" onAction="#excluir" prefHeight="25.0" prefWidth="145.0" styleClass="lion-default" text="Excluir" />
+               </children>
+            </HBox>
+            <HBox layoutX="481.0" layoutY="24.0" prefHeight="25.0" prefWidth="95.0">
+               <children>
+                  <Hyperlink alignment="CENTER" contentDisplay="CENTER" onAction="#retornar" prefHeight="25.0" prefWidth="143.0" styleClass="lion-default" text="Retornar" />
+               </children>
+            </HBox>
+            <HBox layoutX="27.0" layoutY="25.0" prefHeight="25.0" prefWidth="110.0">
+               <children>
+                  <Hyperlink alignment="CENTER" contentDisplay="CENTER" onAction="#selecionar" prefHeight="25.0" prefWidth="115.0" styleClass="lion-default" text="Selecionar" />
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>

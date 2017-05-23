@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" styleClass="main-panel" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.transporte.controller.HomeController">
+   <top>
+      <VBox prefHeight="104.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="30.0" prefHeight="46.0" prefWidth="800.0" text="Sistema Controle de Fretado" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children></VBox>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="298.0" prefWidth="1024.0">
+               <children>
+                  <Button contentDisplay="TOP" layoutX="63.0" layoutY="45.0" mnemonicParsing="false" onAction="#pesquisaCliente" prefHeight="181.0" prefWidth="150.0" text="Cliente">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="images/cliente_icon.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  
+                  <Button contentDisplay="TOP" layoutX="323.0" layoutY="45.0" mnemonicParsing="false" onAction="#pesquisaMotorista" text="Motorista">
+                  	<graphic>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="images/motorista_icon.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  
+                  <Button contentDisplay="TOP" layoutX="566.0" layoutY="45.0" mnemonicParsing="false" onAction="#pesquisaVeiculo" text="Veículo">
+                  	<graphic>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="images/veiculo_icon.jpeg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <VBox prefHeight="53.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="55.0" prefWidth="1024.0">
+               <children>
+                  <Hyperlink alignment="CENTER" contentDisplay="CENTER" layoutX="704.0" layoutY="14.0" onAction="#sair" prefHeight="25.0" prefWidth="74.0" styleClass="bevel-grey" text="Sair" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>

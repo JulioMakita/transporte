@@ -1,0 +1,59 @@
+/* Application wide styles */
+
+.button {
+  -fx-border-radius: 4px;
+  -fx-background-radius: 4px;
+  -fx-padding: 6px 12px 6px 12px;
+  -fx-focus-color: transparent;
+}
+
+
+.button:hover{
+  -fx-border-radius: 4px;
+  -fx-background-radius: 4px;
+  -fx-padding: 6px 12px 6px 12px;
+  -fx-font-weight: bold;
+  -fx-focus-color: transparent;
+}
+
+/* Component specific styles */
+
+
+.main-panel {
+    /* -fx-background-image: url("../images/background.jpg"); */ 
+}
+
+.button_cliente_home{
+	-fx-min-height: 132px;
+    -fx-min-width: 128px;
+    -fx-background-size: 100px 100px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center 8px;
+	-fx-graphic: url('images/cliente_icon.jpg');
+}
+
+.hello-message {
+    -fx-text-fill: #AA0000;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+
+.lion-default {
+	-fx-text-fill:white;
+	-fx-font-size: 20px;
+	-fx-background-color: linear-gradient(#999999 0%, #000000 50%, #999999 100%);
+	-fx-padding: 5 20 5 20;
+    -fx-font-size: 12px;
+}
+
+.bevel-grey {
+    -fx-background-color: 
+        linear-gradient(#f2f2f2, #d6d6d6),
+        linear-gradient(#fcfcfc 0%, #d9d9d9 20%, #d6d6d6 100%),
+        linear-gradient(#dddddd 0%, #f6f6f6 50%);
+    -fx-background-radius: 8,7,6;
+    -fx-background-insets: 0,1,2;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}

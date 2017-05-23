@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import br.com.juliomakita.fxcomponents.control.mask.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" styleClass="main-panel" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.transporte.controller.cliente.CadastroClienteController">
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane hgap="20.0" prefHeight="160.0" prefWidth="1024.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="273.0" minWidth="10.0" prefWidth="152.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="442.0" minWidth="10.0" prefWidth="160.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="449.0" minWidth="10.0" prefWidth="170.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="369.0" minWidth="10.0" prefWidth="199.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="281.0" minWidth="10.0" prefWidth="227.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="71.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="93.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="133.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnSpan="2">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="139.0" style="-fx-font-weight: bold;" text="Dados Pessoais">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="Nome" />
+                        <TextField fx:id="nome" prefHeight="27.0" prefWidth="322.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="Data Nascimento" />
+                        <DateTimeField fx:id="dataNascimento" prefHeight="27.0" prefWidth="155.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="Sexo" />
+                        <ComboBox fx:id="sexo" prefHeight="27.0" prefWidth="156.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="128.0" text="E-mail" />
+                        <EmailField fx:id="email" prefHeight="27.0" prefWidth="260.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+                     <children>
+                        <Label text="RG" />
+                        <TextField fx:id="rg" prefHeight="27.0" prefWidth="153.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="48.0" text="CPF" />
+                        <CpfField fx:id="cpf" prefHeight="27.0" prefWidth="153.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="128.0" text="Tel Residencial" />
+                        <TelefoneField fx:id="telResidencial" prefHeight="27.0" prefWidth="157.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="128.0" text="Tel Celular" />
+                        <CelularField fx:id="telCelular" prefHeight="27.0" prefWidth="153.0" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </GridPane>
+            <GridPane hgap="20.0" layoutY="160.0" prefHeight="100.0" prefWidth="1024.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="265.0" minWidth="10.0" prefWidth="186.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="281.0" minWidth="10.0" prefWidth="183.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="447.0" minWidth="10.0" prefWidth="224.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="341.0" minWidth="10.0" prefWidth="214.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="95.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="346.0" GridPane.columnSpan="2">
+                     <children>
+                        <Label text="Endereço" />
+                        <TextField fx:id="endereco" prefHeight="27.0" prefWidth="397.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="128.0" text="Complemento" />
+                        <TextField fx:id="complemento" prefHeight="27.0" prefWidth="153.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3">
+                     <children>
+                        <Label text="Número" />
+                        <TextField fx:id="numero" prefHeight="27.0" prefWidth="190.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="Bairro" />
+                        <TextField fx:id="bairro" prefHeight="27.0" prefWidth="273.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="55.0" text="Cidade" />
+                        <TextField fx:id="cidade" prefHeight="27.0" prefWidth="273.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="55.0" text="Estado" />
+                        <TextField fx:id="estado" prefHeight="27.0" prefWidth="273.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="128.0" text="Cep" />
+                        <CepField fx:id="cep" prefHeight="27.0" prefWidth="179.0" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </GridPane>
+            <GridPane hgap="20.0" layoutX="2.0" layoutY="267.0" prefHeight="330.0" prefWidth="1024.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="232.0" minWidth="10.0" prefWidth="40.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="232.0" minWidth="10.0" prefWidth="178.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="264.0" minWidth="0.0" prefWidth="189.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="571.0" minWidth="10.0" prefWidth="32.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="571.0" minWidth="10.0" prefWidth="186.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="571.0" minWidth="10.0" prefWidth="127.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="571.0" minWidth="0.0" prefWidth="4.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="571.0" minWidth="10.0" prefWidth="114.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="105.0" minHeight="0.0" prefHeight="51.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="88.0" minHeight="6.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="130.0" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="136.0" minHeight="10.0" prefHeight="83.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="136.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnSpan="4">
+                     <children>
+                        
+                                    <Label prefHeight="18.0" prefWidth="77.0" style="-fx-font-weight: bold;" text="Contrato">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="104.0" text="Vigência Inicio" />
+                        <DateTimeField fx:id="vigenciaInicio" prefHeight="27.0" prefWidth="175.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="55.0" prefWidth="138.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="215.0" text="Vigência Termino" />
+                        <DateTimeField fx:id="vigenciaFim" prefHeight="27.0" prefWidth="213.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <children>
+                        <Hyperlink onAction="#dialogValorContrato" prefHeight="34.0" prefWidth="56.0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="images/lupa.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Hyperlink>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="109.0" text="Valor do Contrato" />
+                        <TextField fx:id="valorContrato" disable="true" prefHeight="27.0" prefWidth="140.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="5" GridPane.columnSpan="3" GridPane.rowIndex="1">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="109.0" text="Valor Extenso" />
+                        <TextField fx:id="valorContratoExtenso" disable="true" prefHeight="27.0" prefWidth="246.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="46.0" prefWidth="81.0" GridPane.rowIndex="2">
+                     <children>
+                        <Hyperlink onAction="#dialogParcelaContrato" prefHeight="34.0" prefWidth="56.0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="images/lupa.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Hyperlink>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <Label text="Parcelas" />
+                        <TextField fx:id="quantidadeParcela" disable="true" prefHeight="27.0" prefWidth="155.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="130.0" text="Valor Mensal(R$)" />
+                        <TextField fx:id="valorMensalParcela" disable="true" prefHeight="27.0" prefWidth="186.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="2">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="130.0" text="Valor Extenso" />
+                        <TextField fx:id="valorExtensoParcela" disable="true" prefHeight="27.0" prefWidth="336.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="3">
+                     <children>
+                        <Hyperlink onAction="#dialogItinerarioContrato" prefHeight="34.0" prefWidth="56.0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="images/lupa.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Hyperlink>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="85.0" text="Local Saida" />
+                        <TextField fx:id="localSaida" disable="true" prefHeight="27.0" prefWidth="220.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="130.0" text="Hora Saida" />
+                        <TextField fx:id="horaSaida" disable="true" prefHeight="27.0" prefWidth="110.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="85.0" text="Local Destino" />
+                        <TextField fx:id="localRetorno" disable="true" prefHeight="27.0" prefWidth="220.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="130.0" text="Hora Retorno" />
+                        <TextField fx:id="horaRetorno" disable="true" prefHeight="27.0" prefWidth="110.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnSpan="5" GridPane.rowIndex="4" GridPane.rowSpan="2">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="92.0" text="Observação" />
+                        <TextArea fx:id="observacao" prefHeight="106.0" prefWidth="661.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="89.0" prefWidth="191.0" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#cadastrar" prefHeight="27.0" prefWidth="130.0" styleClass="lion-default" text="Cadastrar" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="7" GridPane.rowIndex="5">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#retornar" prefHeight="27.0" prefWidth="131.0" styleClass="lion-default" text="Retornar" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </GridPane>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

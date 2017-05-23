@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import br.com.juliomakita.fxcomponents.control.mask.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="main-panel" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.transporte.controller.contrato.PesquisaItinerarioContratoController">
+   <center>
+      <GridPane hgap="30.0" BorderPane.alignment="CENTER">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="262.0" minWidth="10.0" prefWidth="174.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="180.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="223.0" minWidth="10.0" prefWidth="156.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="243.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="194.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="207.0" minHeight="10.0" prefHeight="152.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="206.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <VBox prefHeight="135.0" prefWidth="184.0">
+               <children>                                                  
+                  <Label prefHeight="17.0" prefWidth="85.0" text="Local Saida" />
+                  <TextField fx:id="localSaida" />
+               </children>
+            </VBox>
+            <VBox prefHeight="168.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>        
+                  <Label prefHeight="17.0" prefWidth="173.0" text="Hora Saida" />
+                  <HoraField fx:id="horaSaida" prefHeight="27.0" prefWidth="129.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="85.0" text="Local Retorno" />
+                  <TextField fx:id="localRetorno" prefHeight="27.0" prefWidth="129.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="125.0" text="Hora Retorno" />
+                  <HoraField fx:id="horaRetorno" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <children>
+                  <Label />
+ 					<Button mnemonicParsing="false" onAction="#pesquisar" prefHeight="27.0" prefWidth="90.0" text="Pesquisar" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnSpan="3" GridPane.rowIndex="2">
+               <children>
+                  <TableView fx:id="itinerarioContratoTable" prefHeight="141.0" prefWidth="560.0">
+                    <columns>
+                      <TableColumn fx:id="gradeLocalSaida" prefWidth="172.0" text="Local Saída" />
+                        <TableColumn fx:id="gradeHoraSaida" prefWidth="108.0" text="Hora Saida" />
+                        <TableColumn fx:id="gradeLocalRetorno" prefWidth="163.0" text="Local Retorno" />
+                        <TableColumn fx:id="gradeHoraRetorno" prefWidth="115.0" text="Hora Retorno" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+            <VBox prefHeight="34.0" prefWidth="560.0" GridPane.columnSpan="3" GridPane.rowIndex="3">
+               <children>
+                  <StackPane fx:id="stackPane" prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <Pagination fx:id="pagination" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                  </StackPane>
+               </children>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets left="20.0" right="20.0" top="20.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </center>
+   <bottom>
+      <Pane prefHeight="76.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" layoutX="152.0" layoutY="26.0" prefHeight="25.0" prefWidth="95.0">
+               <children>
+                  <Hyperlink alignment="CENTER" onAction="#abrirDialogCadastrar" prefHeight="25.0" prefWidth="145.0" styleClass="lion-default" text="Incluir" />
+               </children>
+            </HBox>
+            <HBox layoutX="370.0" layoutY="26.0" prefHeight="25.0" prefWidth="95.0">
+               <children>
+                  <Hyperlink alignment="CENTER" onAction="#excluir" prefHeight="25.0" prefWidth="117.0" styleClass="lion-default" text="Excluir" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="480.0" layoutY="26.0" prefHeight="25.0" prefWidth="95.0">
+               <children>
+                  <Hyperlink alignment="CENTER" contentDisplay="CENTER" onAction="#retornar" prefHeight="25.0" prefWidth="132.0" styleClass="lion-default" text="Retornar" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="260.0" layoutY="26.0" prefHeight="25.0" prefWidth="95.0">
+               <children>
+                  <Hyperlink alignment="CENTER" onAction="#editar" prefHeight="25.0" prefWidth="121.0" styleClass="lion-default" text="Editar" />
+               </children>
+            </HBox>
+            <HBox layoutX="26.0" layoutY="26.0" prefHeight="25.0" prefWidth="111.0">
+               <children>
+                  <Hyperlink alignment="CENTER" onAction="#selecionar" prefHeight="25.0" prefWidth="145.0" styleClass="lion-default" text="Selecionar" />
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>
