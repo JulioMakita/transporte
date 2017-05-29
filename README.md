@@ -15,6 +15,15 @@ Go to Build Path -> Configure Build Path -> Libraries(Tab) then click add extern
 
 choose the file fxcomponents-1.0.jar in root path.
 
+# To run project.
+
+You can run the main method in MainApp class or
+
+run with maven build using jfx:run 
+
+
+
+
 
 
 
