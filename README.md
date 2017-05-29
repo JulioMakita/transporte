@@ -2,16 +2,18 @@
 
 Transport system with: 
 
+Java 8
 JavaFX 
 Spring
 HSQLDB 
 JPA
 
+Before run this project you need to add fxcomponents-1.0.jar in you project.
 
-Before use the system you need to add jfxrt.jar.
+# Eclipse
+go to Build Path -> Configure Build Path -> Libraries(Tab) then click add external jars.
+choose the file fxcomponents-1.0.jar in root path.
 
-In Eclipse.
 
-Configure Build Path -> Select JRE and click Add External Jars
 
-the file is in this path if you use linux : usr/lib/jvm/java-8-oracle/jre/lib/ext
+
