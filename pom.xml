@@ -9,6 +9,13 @@
   <name>Transporte</name>
   <packaging>jar</packaging>
   
+<!-- 	<distributionManagement> -->
+<!-- 	  <repository> -->
+<!-- 	    <id>releases</id> -->
+<!-- 	    <url>http://localhost:8081/nexus/content/repositories/dependencies/</url> -->
+<!-- 	  </repository> -->
+<!-- 	</distributionManagement>  -->
+  
   <properties>
       <slf4j.version>1.6.1</slf4j.version>
       <spring.version>4.3.1.RELEASE</spring.version>
@@ -65,6 +72,18 @@
 	            <target>1.8</target>
 	        </configuration>
        </plugin>
+
+<!-- 		<plugin> -->
+<!-- 			<groupId>org.sonatype.plugins</groupId> -->
+<!-- 			<artifactId>nexus-staging-maven-plugin</artifactId> -->
+<!-- 			<version>1.6.6</version> -->
+<!-- 			<extensions>true</extensions> -->
+<!-- 			<configuration> -->
+<!-- 				<serverId>nexus</serverId> -->
+<!-- 				<nexusUrl>http://localhost:8081/nexus/</nexusUrl> -->
+<!-- 			</configuration> -->
+<!-- 		</plugin> -->
+       
   	</plugins>
   </build>
   
@@ -197,6 +216,13 @@
 		<artifactId>joda-time</artifactId>
 		<version>2.3</version>
 	</dependency>
+	
+	<!-- FX Components -->
+<!-- 	<dependency> -->
+<!-- 		<groupId>br.com.fxcomponents</groupId> -->
+<!-- 		<artifactId>fxcomponents</artifactId> -->
+<!-- 		<version>1.0</version> -->
+<!-- 	</dependency> -->
 	
 </dependencies>
   

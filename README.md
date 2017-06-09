@@ -8,12 +8,12 @@ Spring
 HSQLDB 
 JPA
 
-Before run this project you need to add fxcomponents-1.0.jar in you project.
+Before run this project you need to add libraries.jar in you project.
 
 # Eclipse
 Go to Build Path -> Configure Build Path -> Libraries(Tab) then click add external jars.
 
-choose the file fxcomponents-1.0.jar in root path.
+choose the file libraries.jar in root path.
 
 # To run project.
 
